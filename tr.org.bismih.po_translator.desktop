@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Pardus Andorid Emulator
+Name[tr]=Po Çevirici
+GenericName=Po Translator
+GenericName[tr]=Po Çevirici
+Comment=Translate pot file easily.
+Comment[tr]=Kolayca Pot dosyalarını çevirin.
+Exec=po_translator
+Icon=po_translator
+Terminal=false
+Type=Application
+Categories=GTK;System;PackageManager;
+StartupNotify=true
+Keywords=po_translator;translate;po;pardus;
