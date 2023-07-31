@@ -1,7 +1,8 @@
-from googletrans import Translator
 import polib
 import threading
-
+import requests
+from urllib.parse import quote
+import json
 class Po_Translator2:
     def __init__(self):
         pass
@@ -11,9 +12,21 @@ class Po_Translator2:
         return [e.msgid for e in po]
 
     def get_translation_api(self,text, lang_code):
-        translator = Translator()
-        translation = translator.translate(text, src='en', dest=lang_code)
-        return translation.text
+        text = quote(text)
+        url=f"https://translate.googleapis.com/translate_a/single?client=gtx&sl=en&tl={lang_code}&dt=t&q={text}"
+        try:
+            with requests.get(url, stream=True) as response:
+                response.raise_for_status()
+                with open("/tmp/translate/t.txt", "wb") as file:
+                    for chunk in response.iter_content(chunk_size=8192):
+                        file.write(chunk)
+            with open("/tmp/translate/t.txt", "r") as f:
+                tr = f.readline()
+                translation=json.loads(tr)[0][0][0]
+                return translation
+        except requests.exceptions.RequestException as e:
+            print(f"File download error: {e}")
+        return "null"
 
     def translate_and_generate_po(self,pot_file, lang_code):
         source_texts = self.get_po_file(pot_file)
