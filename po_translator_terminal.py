@@ -8,5 +8,6 @@ if __name__ == '__main__':
     translator.pot_file_path=""
     translator.lang_codes=[]
     translator.update_path=""
+    translator.is_po_file_active=True
 
     translator.generate_translation()
