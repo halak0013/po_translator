@@ -60,23 +60,27 @@ class MainWindow(Gtk.Window):
         self.chck_lang_list = [
             self.chck_lng_tr,
             self.chck_lng_ar,
+            self.chck_lng_ur,
             self.chck_lng_de,
             self.chck_lng_es,
             self.chck_lng_zh,
             self.chck_lng_Ja,
             self.chck_lng_it,
-            self.chck_lng_ru
+            self.chck_lng_ru,
+            self.chck_lng_pt
         ]
 
         self.lang_code_list = [
             "tr",
             "ar",
+            "ur",
             "de",
             "es",
-            "zh-CN",
+            "zh_CN",
             "ja",
             "it",
-            "ru"
+            "ru",
+            "pt"
         ]
 
 
@@ -88,12 +92,14 @@ class MainWindow(Gtk.Window):
         
         self.chck_lng_tr: Gtk.CheckButton = self.builder.get_object("chck_lng_tr")
         self.chck_lng_ar: Gtk.CheckButton = self.builder.get_object("chck_lng_ar")
+        self.chck_lng_ur: Gtk.CheckButton = self.builder.get_object("chck_lng_ur")
         self.chck_lng_de: Gtk.CheckButton = self.builder.get_object("chck_lng_de")
         self.chck_lng_es: Gtk.CheckButton = self.builder.get_object("chck_lng_es")
         self.chck_lng_zh: Gtk.CheckButton = self.builder.get_object("chck_lng_zh-CN")
         self.chck_lng_Ja: Gtk.CheckButton = self.builder.get_object("chck_lng_Ja")
         self.chck_lng_it: Gtk.CheckButton = self.builder.get_object("chck_lng_it")
         self.chck_lng_ru: Gtk.CheckButton = self.builder.get_object("chck_lng_ru")
+        self.chck_lng_pt: Gtk.CheckButton = self.builder.get_object("chck_lng_pt")
 
         self.file_po: Gtk.FileChooserButton = self.builder.get_object("file_po")
         self.btn_translate: Gtk.Button = self.builder.get_object("btn_translate")
@@ -117,6 +123,8 @@ class MainWindow(Gtk.Window):
     def on_btn_translate_clicked(self,b):
         if os.path.exists(self.pot_file_path):
             self.fill_lang_codes()
+            if not os.path.exists("/tmp/translate/"):
+                os.makedirs("/tmp/translate")
             self.translator.start_translation(self.pot_file_path,self.selected_lang_codes)
         else:
             print("pot file not found, please try again")
