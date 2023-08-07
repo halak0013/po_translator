@@ -5,9 +5,9 @@ from src.Po_Translator2 import Po_Translator2
 if __name__ == '__main__':
 
     translator=Po_Translator2()
-    translator.pot_file_path="/home/bismih/projelerimiz2/yazilim/python/po_translator/test/test.pot"
-    translator.lang_codes=["tr","ur"]
-    po_update_files="/home/bismih/projelerimiz2/yazilim/python/po_translator/po/files"
+    translator.pot_file_path=""
+    translator.lang_codes=[]
+    po_update_files=""
 
     # Update POT file
     #update_pot_command = "xgettext -o po/pardus-android-emulator.pot --files-from=po/files"
