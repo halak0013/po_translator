@@ -61,6 +61,7 @@ class MainWindow(Gtk.Window):
         self.chck_lang_list = [
             self.chck_lng_tr,
             self.chck_lng_ar,
+            self.chck_lng_az,
             self.chck_lng_ur,
             self.chck_lng_de,
             self.chck_lng_es,
@@ -68,12 +69,14 @@ class MainWindow(Gtk.Window):
             self.chck_lng_Ja,
             self.chck_lng_it,
             self.chck_lng_ru,
-            self.chck_lng_pt
+            self.chck_lng_pt,
+            self.chck_lng_fr
         ]
 
         self.lang_code_list = [
             "tr",
             "ar",
+            "az",
             "ur",
             "de",
             "es",
@@ -81,7 +84,8 @@ class MainWindow(Gtk.Window):
             "ja",
             "it",
             "ru",
-            "pt"
+            "pt",
+            "fr"
         ]
 
 
@@ -93,6 +97,7 @@ class MainWindow(Gtk.Window):
         
         self.chck_lng_tr: Gtk.CheckButton = self.builder.get_object("chck_lng_tr")
         self.chck_lng_ar: Gtk.CheckButton = self.builder.get_object("chck_lng_ar")
+        self.chck_lng_az: Gtk.CheckButton = self.builder.get_object("chck_lng_az")
         self.chck_lng_ur: Gtk.CheckButton = self.builder.get_object("chck_lng_ur")
         self.chck_lng_de: Gtk.CheckButton = self.builder.get_object("chck_lng_de")
         self.chck_lng_es: Gtk.CheckButton = self.builder.get_object("chck_lng_es")
@@ -101,6 +106,7 @@ class MainWindow(Gtk.Window):
         self.chck_lng_it: Gtk.CheckButton = self.builder.get_object("chck_lng_it")
         self.chck_lng_ru: Gtk.CheckButton = self.builder.get_object("chck_lng_ru")
         self.chck_lng_pt: Gtk.CheckButton = self.builder.get_object("chck_lng_pt")
+        self.chck_lng_fr: Gtk.CheckButton = self.builder.get_object("chck_lng_fr")
 
         self.file_po: Gtk.FileChooserButton = self.builder.get_object("file_po")
         self.file_po_update_files: Gtk.FileChooserButton = self.builder.get_object("file_po_update_files")

@@ -64,8 +64,8 @@
                 <property name="orientation">vertical</property>
                 <property name="spacing">7</property>
                 <child>
-                  <object class="GtkCheckButton" id="chck_lng_it">
-                    <property name="label" translatable="yes">It  🇮🇹</property>
+                  <object class="GtkCheckButton" id="chck_lng_ar">
+                    <property name="label" translatable="yes">Ar 🇵🇸</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">False</property>
@@ -79,13 +79,12 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkCheckButton" id="chck_lng_Ja">
-                    <property name="label" translatable="yes">Ja 🇯🇵</property>
+                  <object class="GtkCheckButton" id="chck_lng_ur">
+                    <property name="label" translatable="yes">Ur 🇵🇰</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">False</property>
                     <property name="draw-indicator">True</property>
-                    <signal name="toggled" handler="on_chck_lng_toggled" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -109,8 +108,8 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkCheckButton" id="chck_lng_ru">
-                    <property name="label" translatable="yes">Ru  🇷🇺</property>
+                  <object class="GtkCheckButton" id="chck_lng_Ja">
+                    <property name="label" translatable="yes">Ja 🇯🇵</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">False</property>
@@ -123,9 +122,26 @@
                     <property name="position">3</property>
                   </packing>
                 </child>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkBox" id="box_langs1">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="margin-start">7</property>
+                <property name="margin-end">7</property>
+                <property name="margin-top">7</property>
+                <property name="margin-bottom">7</property>
+                <property name="orientation">vertical</property>
+                <property name="spacing">7</property>
                 <child>
-                  <object class="GtkCheckButton" id="chck_lng_pt">
-                    <property name="label" translatable="yes">Pt 🇵🇹</property>
+                  <object class="GtkCheckButton" id="chck_lng_az">
+                    <property name="label" translatable="yes">Az 🇦🇿</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">False</property>
@@ -134,14 +150,58 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">4</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="chck_lng_it">
+                    <property name="label" translatable="yes">It  🇮🇹</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">False</property>
+                    <property name="draw-indicator">True</property>
+                    <signal name="toggled" handler="on_chck_lng_toggled" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">1</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="chck_lng_ru">
+                    <property name="label" translatable="yes">Ru  🇷🇺</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">False</property>
+                    <property name="draw-indicator">True</property>
+                    <signal name="toggled" handler="on_chck_lng_toggled" swapped="no"/>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+                <child>
+                  <object class="GtkCheckButton" id="chck_lng_fr">
+                    <property name="label" translatable="yes">Fr 🇫🇷</property>
+                    <property name="visible">True</property>
+                    <property name="can-focus">True</property>
+                    <property name="receives-default">False</property>
+                    <property name="draw-indicator">True</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
               </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">0</property>
+                <property name="position">1</property>
               </packing>
             </child>
             <child>
@@ -170,32 +230,17 @@
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkCheckButton" id="chck_lng_ar">
-                    <property name="label" translatable="yes">Ar 🇵🇸</property>
+                  <object class="GtkCheckButton" id="chck_lng_pt">
+                    <property name="label" translatable="yes">Pt 🇵🇹</property>
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">False</property>
                     <property name="draw-indicator">True</property>
-                    <signal name="toggled" handler="on_chck_lng_toggled" swapped="no"/>
                   </object>
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
                     <property name="position">1</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkCheckButton" id="chck_lng_ur">
-                    <property name="label" translatable="yes">Ur 🇵🇰</property>
-                    <property name="visible">True</property>
-                    <property name="can-focus">True</property>
-                    <property name="receives-default">False</property>
-                    <property name="draw-indicator">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -210,7 +255,7 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">3</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
                 <child>
@@ -225,14 +270,14 @@
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">True</property>
-                    <property name="position">4</property>
+                    <property name="position">3</property>
                   </packing>
                 </child>
               </object>
               <packing>
                 <property name="expand">False</property>
                 <property name="fill">True</property>
-                <property name="position">1</property>
+                <property name="position">2</property>
               </packing>
             </child>
           </object>
